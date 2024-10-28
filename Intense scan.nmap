@@ -1,0 +1,116 @@
+Starting Nmap 7.95 ( https://nmap.org ) at 2024-09-24 16:00 India Standard Time
+NSE: Loaded 157 scripts for scanning.
+NSE: Script Pre-scanning.
+Initiating NSE at 16:00
+Completed NSE at 16:00, 0.00s elapsed
+Initiating NSE at 16:00
+Completed NSE at 16:00, 0.00s elapsed
+Initiating NSE at 16:00
+Completed NSE at 16:00, 0.00s elapsed
+Initiating Parallel DNS resolution of 1 host. at 16:00
+Completed Parallel DNS resolution of 1 host. at 16:00, 5.84s elapsed
+Initiating SYN Stealth Scan at 16:00
+Scanning 192.168.0.245 [1000 ports]
+Discovered open port 445/tcp on 192.168.0.245
+Discovered open port 3306/tcp on 192.168.0.245
+Discovered open port 139/tcp on 192.168.0.245
+Discovered open port 135/tcp on 192.168.0.245
+Discovered open port 443/tcp on 192.168.0.245
+Discovered open port 80/tcp on 192.168.0.245
+Discovered open port 8099/tcp on 192.168.0.245
+Discovered open port 6646/tcp on 192.168.0.245
+Discovered open port 5357/tcp on 192.168.0.245
+Discovered open port 912/tcp on 192.168.0.245
+Discovered open port 902/tcp on 192.168.0.245
+Completed SYN Stealth Scan at 16:00, 1.61s elapsed (1000 total ports)
+Initiating Service scan at 16:00
+Scanning 11 services on 192.168.0.245
+Completed Service scan at 16:01, 90.22s elapsed (11 services on 1 host)
+Initiating OS detection (try #1) against 192.168.0.245
+NSE: Script scanning 192.168.0.245.
+Initiating NSE at 16:01
+Completed NSE at 16:01, 14.32s elapsed
+Initiating NSE at 16:01
+Completed NSE at 16:01, 0.31s elapsed
+Initiating NSE at 16:01
+Completed NSE at 16:01, 0.01s elapsed
+Nmap scan report for 192.168.0.245
+Host is up (0.0010s latency).
+Not shown: 973 closed tcp ports (reset)
+PORT     STATE    SERVICE         VERSION
+25/tcp   filtered smtp
+80/tcp   open     http            Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: Oxer
+110/tcp  filtered pop3
+119/tcp  filtered nntp
+125/tcp  filtered locus-map
+135/tcp  open     msrpc           Microsoft Windows RPC
+139/tcp  open     netbios-ssn     Microsoft Windows netbios-ssn
+143/tcp  filtered imap
+443/tcp  open     ssl/http        VMware Server http config
+|_http-title: Site doesn't have a title (text/plain; charset=utf-8).
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=VMware/countryName=US
+| Issuer: commonName=VMware/countryName=US
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-12-21T08:34:36
+| Not valid after:  2024-12-20T08:34:36
+| MD5:   9faa:a90a:983b:bf58:63f4:850d:e043:9dda
+|_SHA-1: b136:6e9d:5b9a:3c37:db34:5136:90f8:9682:5f76:1353
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+445/tcp  open     microsoft-ds?
+465/tcp  filtered smtps
+548/tcp  filtered afp
+563/tcp  filtered snews
+587/tcp  filtered submission
+800/tcp  filtered mdbs_daemon
+902/tcp  open     ssl/vmware-auth VMware Authentication Daemon 1.10 (Uses VNC, SOAP)
+903/tcp  filtered iss-console-mgr
+912/tcp  open     vmware-auth     VMware Authentication Daemon 1.0 (Uses VNC, SOAP)
+993/tcp  filtered imaps
+995/tcp  filtered pop3s
+1025/tcp filtered NFS-or-IIS
+1122/tcp filtered availant-mgr
+1433/tcp filtered ms-sql-s
+3306/tcp open     mysql           MySQL (unauthorized)
+5357/tcp open     http            Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Service Unavailable
+|_http-server-header: Microsoft-HTTPAPI/2.0
+6646/tcp open     tcpwrapped
+8099/tcp open     remoting        MS .NET Remoting services
+Device type: general purpose
+Running: Microsoft Windows 10|11
+OS CPE: cpe:/o:microsoft:windows_10 cpe:/o:microsoft:windows_11
+OS details: Microsoft Windows 10 1607 - 11 23H2
+Uptime guess: 0.008 days (since Tue Sep 24 15:50:04 2024)
+Network Distance: 0 hops
+TCP Sequence Prediction: Difficulty=263 (Good luck!)
+IP ID Sequence Generation: Incremental
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2024-09-24T10:31:43
+|_  start_date: N/A
+
+NSE: Script Post-scanning.
+Initiating NSE at 16:01
+Completed NSE at 16:01, 0.00s elapsed
+Initiating NSE at 16:01
+Completed NSE at 16:01, 0.00s elapsed
+Initiating NSE at 16:01
+Completed NSE at 16:01, 0.00s elapsed
+Read data files from: C:\Program Files (x86)\Nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 115.62 seconds
+           Raw packets sent: 1032 (46.122KB) | Rcvd: 2049 (87.248KB)
